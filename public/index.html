@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker | Dark Mode</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Expense Tracker</h1>
+        </header>
+        
+        <div class="glass-card">
+            <div class="input-section">
+                <div class="input-group">
+                    <label for="category_select">Category</label>
+                    <select id="category_select" required> 
+                        <option style="color:black;" value="">Select Category</option>
+                        <option style="color:black;" value="Income">Income</option>
+                        <option style="color:black;" value="Expense">Expense</option>
+                    </select>
+                </div>
+                
+                <div class="input-group">
+                    <label for="amount_input">Amount (₹)</label>
+                    <input type="number" id="amount_input" placeholder="Enter amount" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="info">Description</label>
+                    <input type="text" id="info" placeholder="Enter description" required>
+                </div>
+                
+                <div class="input-group">
+                    <label for="date_input">Date</label>
+                    <input type="date" id="date_input" required>
+                </div>
+                
+                <button id="add_btn">Add Transaction</button>
+                <button id="update_btn" style="display: none;">Update Transaction</button>
+            </div>
+
+            <div class="summary-cards">
+                <div class="summary-card">
+                    <h3>Total Balance</h3>
+                    <p id="total-amount">₹0.00</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Income</h3>
+                    <p id="total-income">₹0.00</p>
+                </div>
+                <div class="summary-card">
+                    <h3>Total Expenses</h3>
+                    <p id="total-expenses">₹0.00</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="table-section glass-card">
+            <h2>Transaction History</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Amount</th>
+                            <th>Description</th>
+                            <th>Date</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="expense-table-body">
+                        <!-- Expense rows will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
