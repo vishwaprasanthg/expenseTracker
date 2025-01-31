@@ -10,7 +10,7 @@ app.use(express.static('public')); // Serve static files
 app.use(cors()); // Enable CORS for cross-origin requests
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://crazykillerr2006:SzBsgjeZQuTBTvoh@cluster0.vgkww.mongodb.net/books-collection?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect('mongodb+srv://crazykillerr2006:SzBsgjeZQuTBTvoh@cluster0.vgkww.mongodb.net/expense-tracker?retryWrites=true&w=majority&appName=Cluster0', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
