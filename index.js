@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
@@ -10,7 +11,7 @@ app.use(express.static('public')); // Serve static files
 app.use(cors()); // Enable CORS for cross-origin requests
 
 // MongoDB connection
-mongoose.connect('mongodb+srv://crazykillerr2006:SzBsgjeZQuTBTvoh@cluster0.vgkww.mongodb.net/expense-tracker?retryWrites=true&w=majority&appName=Cluster0', {
+mongoose.connect(process.env.MONGODB_URI, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
